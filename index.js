@@ -10,10 +10,10 @@ const gps = require('./routes/gps.js');
 const getTime = require('./routes/getTime.js');
 
 
-app.use((req, res, next) => {
-    logger.log({ level: 'info', message: req.body });
-    next();
-});
+// app.use((req, res, next) => {
+//     logger.log({ level: 'info', message: req.body });
+//     next();
+// });
 
 // Routes
 app.use('/log', gps);
