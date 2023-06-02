@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
             }
         }
 
-        const validateData = { speed: Math.floor(speed * 3.6), lat, long, dateTime, angle, args: { charging: null, altitude: 0, sattelites: 0 } }
+        const validateData = { deviceId, speed: Math.floor(speed * 3.6), lat, long, dateTime, angle, args: { charging: null, altitude: 0, sattelites: 0 } }
         const { value, error } = schema.validate(validateData);
         if (error) {
             logger.log({ level: 'error', message: error.message });
@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
             pool.query(`INSERT INTO reports.tracking (device_id, keyword, date_time, speed, angle, battery_level, message, args, lat, lon, ignition) 
                     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) ON CONFLICT (device_id) DO UPDATE SET 
                     keyword = $2, date_time = $3, speed = $4, angle = $5, battery_level = $6, message = $7, args = $8, lat = $9, lon = $10, ignition = $11;`,
-                [deviceId,
+                [value.deviceId,
                     value.keyword,
                     value.dateTime,
                     value.speed,

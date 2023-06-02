@@ -1,1 +1,22 @@
 {"date":"24/05/2023 15:38:46","level":"info","message":{"angle":20,"dateTime":"05/18/2023 16:08:07","device_id":123123766767676,"lat":41.3507031,"long":69.219568,"speed":0}}
+{"date":"02/06/2023 15:25:47","level":"error","message":"\"long\" is required"}
+{"date":"02/06/2023 15:29:44","level":"error","message":"\"deviceId\" is required"}
+{"date":"02/06/2023 15:29:44","level":"error","message":"\"deviceId\" is required"}
+{"date":"02/06/2023 15:29:44","level":"error","message":"\"deviceId\" is required"}
+{"date":"02/06/2023 15:30:34","level":"error","message":"\"deviceId\" must be a string"}
+{"date":"02/06/2023 15:30:34","level":"error","message":"\"deviceId\" must be a string"}
+{"date":"02/06/2023 15:30:34","level":"error","message":"\"deviceId\" must be a string"}
+{"date":"02/06/2023 15:30:34","level":"error","message":"\"deviceId\" must be a string"}
+{"date":"02/06/2023 15:31:21","level":"error","message":"\"deviceId\" length must be at least 3 characters long"}
+{"date":"02/06/2023 15:31:21","level":"error","message":"\"deviceId\" length must be at least 3 characters long"}
+{"date":"02/06/2023 15:31:21","level":"error","message":"\"deviceId\" length must be at least 3 characters long"}
+{"date":"02/06/2023 15:36:12","level":"error","message":"\"deviceId\" must be a string"}
+{"date":"02/06/2023 15:36:12","level":"error","message":"\"dateTime\" must be in timestamp or number of milliseconds format"}
+{"date":"02/06/2023 15:36:12","level":"error","message":"\"dateTime\" must be in timestamp or number of milliseconds format"}
+{"date":"02/06/2023 15:36:12","level":"error","message":"\"dateTime\" must be in timestamp or number of milliseconds format"}
+{"date":"02/06/2023 15:36:12","level":"error","message":"\"dateTime\" must be in timestamp or number of milliseconds format"}
+{"date":"02/06/2023 15:36:12","level":"error","message":"\"long\" is required"}
+{"date":"02/06/2023 15:36:12","level":"error","message":"\"long\" is required"}
+{"date":"02/06/2023 15:36:12","level":"error","message":"\"dateTime\" must be in timestamp or number of milliseconds format"}
+{"date":"02/06/2023 15:36:12","level":"error","message":"\"dateTime\" must be in timestamp or number of milliseconds format"}
+{"date":"02/06/2023 15:36:12","level":"error","message":"\"dateTime\" must be in timestamp or number of milliseconds format"}
