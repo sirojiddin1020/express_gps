@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
         const time = Date.now();
         res.send({ time: time, err: null });
     } catch (error) {
-        res.send({ err: error });
+        res.send({ err: error }).status(400);
     }
 });
 
