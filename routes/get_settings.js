@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
                     onstop: 60
                 },
                 server_time: Date.now(),
-                cahed_data: 100
+                cached_data: 100
             }
         });
 
@@ -28,4 +28,4 @@ router.get('/', async (req, res) => {
     }
 });
 
-module.exports = router; 
+module.exports = router;
