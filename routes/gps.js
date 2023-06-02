@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
             }
         }
 
-        const validateData = { deviceId, speed: Math.floor(speed * 3.6), lat, long, dateTime, angle, args: { charging: null, altitude: 0, sattelites: 0 } }
+        const validateData = { deviceId, speed: Math.floor(speed), lat, long, dateTime, angle, args: { charging: null, altitude: 0, sattelites: 0 } }
         const { value, error } = schema.validate(validateData);
         if (error) {
             logger.log({ level: 'error', message: error.message });
@@ -49,7 +49,7 @@ router.post('/', async (req, res) => {
                         logger.log({ level: 'error', message: error.message });
                         res.status(400).send({ msg: error.message, status: 0 });
                     } else {
-                        res.send({ msg: "Data logged successfully", status: 1 });
+                        res.send({ msg: "Data logged successfully", status: 1, isSettings: true });
                     }
                 });
         }
