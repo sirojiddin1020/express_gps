@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { Pool } = require('pg');
 
-const DB = require('../util/db.js');
+const DB = require('../config/db.js');
 const calculateAngle = require('../util/calculateAngle.js');
 const schema = require('../util/validate.js');
 const logger = require('../util/logger.js');
