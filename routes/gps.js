@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
         const { value, error } = schema.validate(validateData);
         if (error) {
             logger.log({ level: 'error', message: error.message });
-            res.send({ msg: error.message, status: 0 }).status(400);
+            res.status(400).send({ msg: error.message, status: 0 });
         } else {
             pool.query(`INSERT INTO reports.tracking (device_id, keyword, date_time, speed, angle, battery_level, message, args, lat, lon, ignition) 
                     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) ON CONFLICT (device_id) DO UPDATE SET 
@@ -47,7 +47,7 @@ router.post('/', async (req, res) => {
                 ], (error) => {
                     if (error) {
                         logger.log({ level: 'error', message: error.message });
-                        res.send({ msg: error.message }).status(400);
+                        res.status(400).send({ msg: error.message, status: 0 });
                     } else {
                         res.send({ msg: "Data logged successfully", status: 1 });
                     }
@@ -55,7 +55,7 @@ router.post('/', async (req, res) => {
         }
     } catch (error) {
         logger.log({ level: 'error', message: error.message });
-        res.send({ msg: error.message, status: 0 }).status(400);
+        res.status(400).send({ msg: error.message, status: 0 });
     }
 });
 
